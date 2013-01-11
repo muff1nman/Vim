@@ -1,1 +1,2 @@
 xmledit.vmb: call delete('/home/andrew/.vim/ftplugin/xml.vim')|call delete('/home/andrew/.vim/doc/xml-plugin.txt')
+markdown-1.2.2.vba: call delete('/home/andrew/.vim/ftdetect/markdown.vim')|call delete('/home/andrew/.vim/snippets/markdown.snippets')|call delete('/home/andrew/.vim/syntax/markdown.vim')
