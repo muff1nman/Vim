@@ -54,6 +54,9 @@ endif " has("autocmd")
 au BufWinLeave * silent! mkview
 au BufWinEnter * silent! loadview
 
+" Markdown compile
+map cp :!Markdown.pl % > index.html <CR>
+
 set nocp
 
 map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
