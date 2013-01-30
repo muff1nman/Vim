@@ -3,6 +3,7 @@ filetype plugin on
 " For copying automatically the visual selection
 set go+=a
 set clipboard=unnamed
+set ruler
 
 set nocompatible
 filetype indent on
