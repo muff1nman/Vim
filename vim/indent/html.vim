@@ -158,7 +158,7 @@ call s:AddITags(['a', 'abbr', 'acronym', 'address', 'b', 'bdo', 'big',
 " tags added 2011 Sep 09 (especially HTML5 tags):
 call s:AddITags(['area', 'article', 'aside', 'audio', 'bdi', 'canvas',
     \ 'command', 'datalist', 'details', 'embed', 'figure', 'footer',
-    \ 'header', 'group', 'keygen', 'mark', 'math', 'meter', 'nav', 'output',
+    \ 'header', 'hgroup', 'group', 'keygen', 'mark', 'math', 'meter', 'nav', 'output',
     \ 'progress', 'ruby', 'section', 'svg', 'texture', 'time', 'video',
     \ 'wbr', 'text'])
 
