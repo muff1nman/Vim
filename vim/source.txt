@@ -3,3 +3,8 @@ http://www.vim.org/scripts/script.php?script_id=2075
 
 racket stuff
 git://github.com/wlangstroth/vim-racket.git
+
+pathogen
+git://github.com/tpope/vim-pathogen.git
+
+
