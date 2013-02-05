@@ -4,3 +4,6 @@
 [submodule "vim/bundle/jack"]
 	path = vim/bundle/jack
 	url = https://github.com/zirrostig/vim-jack-syntax.git
+[submodule "vim/bundle/xmlEdit"]
+	path = vim/bundle/xmlEdit
+	url = git://github.com/sukima/xmledit.git
