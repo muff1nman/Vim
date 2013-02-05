@@ -1,3 +1,6 @@
 [submodule "vim/bundle/rack"]
 	path = vim/bundle/rack
 	url = git://github.com/wlangstroth/vim-racket.git
+[submodule "vim/bundle/jack"]
+	path = vim/bundle/jack
+	url = https://github.com/zirrostig/vim-jack-syntax.git
