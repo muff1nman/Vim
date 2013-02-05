@@ -1,0 +1,3 @@
+[submodule "vim/bundle/rack"]
+	path = vim/bundle/rack
+	url = git://github.com/wlangstroth/vim-racket.git
