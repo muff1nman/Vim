@@ -1,5 +1,8 @@
 filetype plugin on
 
+"pathogen
+execute pathogen#infect()
+
 " For copying automatically the visual selection
 set go+=a
 set clipboard=unnamed
