@@ -4,3 +4,6 @@
 [submodule "vim/bundle/xmlEdit"]
 	path = vim/bundle/xmlEdit
 	url = git://github.com/sukima/xmledit.git
+[submodule "vim/bundle/racket"]
+	path = vim/bundle/racket
+	url = git://github.com/wlangstroth/vim-racket.git
