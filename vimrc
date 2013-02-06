@@ -95,6 +95,9 @@ nmap K <C-U>
 nnoremap <C-D> J
 nnoremap <C-U> K
 
+""select only word
+set selection=exclusive
+
 "Nasty tab 
 nnoremap <Tab> <Esc>
 vnoremap <Tab> <Esc>gV
