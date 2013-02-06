@@ -89,8 +89,13 @@ augroup vimrc_autocmds
   autocmd BufEnter * match OverLength /\%82v.*/
 augroup END
 
+"""" Mapings for half screen up and half screen down.
+nmap J <C-D>
+nmap K <C-U>
+nnoremap <C-D> J
+nnoremap <C-U> K
 
-
+"Nasty tab 
 nnoremap <Tab> <Esc>
 vnoremap <Tab> <Esc>gV
 onoremap <Tab> <Esc>
