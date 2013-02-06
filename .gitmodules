@@ -7,3 +7,6 @@
 [submodule "vim/bundle/racket"]
 	path = vim/bundle/racket
 	url = git://github.com/wlangstroth/vim-racket.git
+[submodule "vim/bundle/smoothScroll"]
+	path = vim/bundle/smoothScroll
+	url = git://github.com/vim-scripts/Smooth-Scroll.git
