@@ -128,4 +128,5 @@ set backspace=indent,eol,start
 "
 "" End attempt for autosave
 
-
+" Yaml
+au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/yaml.vim
