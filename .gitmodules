@@ -10,3 +10,6 @@
 [submodule "vim/bundle/smoothScroll"]
 	path = vim/bundle/smoothScroll
 	url = git://github.com/vim-scripts/Smooth-Scroll.git
+[submodule "vim/bundle/javascript"]
+	path = vim/bundle/javascript
+	url = git://github.com/pangloss/vim-javascript.git
