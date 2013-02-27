@@ -132,4 +132,6 @@ set backspace=indent,eol,start
 au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/yaml.vim
 
 " :W the same as :w
-cnoreabbrev <expr> W ((getcmdtype() is# ':' && getcmdline() is# 'W')?('w'):('W'))
+command W w
+command Wq wq
+command WQ wq
