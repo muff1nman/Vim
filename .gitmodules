@@ -19,3 +19,6 @@
 [submodule "vim/bundle/ruby"]
 	path = vim/bundle/ruby
 	url = git://github.com/vim-ruby/vim-ruby.git
+[submodule "vim/bundle/template"]
+	path = vim/bundle/template
+	url = https://github.com/aperezdc/vim-template
