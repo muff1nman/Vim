@@ -19,3 +19,6 @@
 [submodule "vim/bundle/syntax-extra-lex-bison-c"]
 	path = vim/bundle/syntax-extra-lex-bison-c
 	url = git://github.com/justinmk/vim-syntax-extra.git
+[submodule "vim/bundle/ruby"]
+	path = vim/bundle/ruby
+	url = git://github.com/vim-ruby/vim-ruby.git
