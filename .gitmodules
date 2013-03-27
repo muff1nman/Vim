@@ -16,3 +16,6 @@
 [submodule "vim/bundle/yaml"]
 	path = vim/bundle/yaml
 	url = https://github.com/avakhov/vim-yaml
+[submodule "vim/bundle/syntax-extra-lex-bison-c"]
+	path = vim/bundle/syntax-extra-lex-bison-c
+	url = git://github.com/justinmk/vim-syntax-extra.git
