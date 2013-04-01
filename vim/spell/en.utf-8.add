@@ -36,3 +36,5 @@ SQLite
 JDBC
 Serializable
 API
+DAO
+lexer
