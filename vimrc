@@ -25,7 +25,6 @@ set shiftwidth=4
 set smartindent
 set tabstop=4
 set expandtab
-set number
 set tw=80
 set fo=cqt
 set wm=0
