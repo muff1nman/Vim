@@ -31,3 +31,6 @@
 [submodule "vim/bundle/template"]
 	path = vim/bundle/template
 	url = git://github.com/muff1nman/vim-template.git
+[submodule "vim/bundle/coffee-script"]
+	path = vim/bundle/coffee-script
+	url = https://github.com/kchmck/vim-coffee-script.git
