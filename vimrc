@@ -95,25 +95,6 @@ map cp :!Markdown.pl % > index.html <CR>
 
 set nocp
 
-map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
-
-map - :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
-
-set tags+=$HOME/cppTags/tags
-set tags+=/usr/local/share/tags/boost/tags
-
-let OmniCpp_NamespaceSearch = 1
-let OmniCpp_GlobalScopeSearch = 1
-let OmniCpp_ShowAccess = 1
-let OmniCpp_ShowPrototypeInAbbr = 1 " show function parameters
-let OmniCpp_MayCompleteDot = 1 " autocomplete after .
-let OmniCpp_MayCompleteArrow = 1 " autocomplete after ->
-let OmniCpp_MayCompleteScope = 1 " autocomplete after ::
-let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
-let OmniCpp_SelectFirstItem = 2
-
-set completeopt=menu
-
 " Added to hightlight text that goes over 80
 
 augroup vimrc_autocmds
