@@ -15,6 +15,7 @@ set ruler
 set nocompatible
 filetype indent on
 
+
 syntax on
 " Didnt work
 "syntax include @TEX syntax/tex.vim
@@ -50,16 +51,20 @@ set smartindent
 set nowrap
 set history=50
 set incsearch
-set shiftwidth=4
-set smartindent
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2
 set expandtab
+set smartindent
 set tw=80
 set fo=cqt
 set wm=0
 set foldmethod=indent
 set foldlevel=99
 set foldlevelstart=99
+" Delete faster!!!
+" set backspace=indent,eol,start
+" set autoindent
 
 if has("autocmd")
   autocmd BufReadPost *
