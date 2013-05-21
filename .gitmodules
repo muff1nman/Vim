@@ -37,3 +37,6 @@
 [submodule "vim/bundle/processing"]
 	path = vim/bundle/processing
 	url = git://github.com/sophacles/vim-processing.git
+[submodule "vim/bundle/nerdtree"]
+	path = vim/bundle/nerdtree
+	url = git://github.com/scrooloose/nerdtree.git
