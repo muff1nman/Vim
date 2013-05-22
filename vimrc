@@ -153,3 +153,9 @@ au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/yaml.vim
 command W w
 command Wq wq
 command WQ wq
+
+" To run processing with F5 within vim
+let g:use_processing_java=1
+
+" To enable folding for processing
+let g:processing_fold=1
