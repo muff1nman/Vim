@@ -17,6 +17,9 @@ filetype indent on
 
 
 syntax on
+
+colorscheme molokai
+
 " Didnt work
 "syntax include @TEX syntax/tex.vim
 "syntax region texSnip matchgroup=Snip start="TEX" end="TEX" contains=@TEX
