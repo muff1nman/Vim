@@ -18,7 +18,7 @@ filetype indent on
 
 syntax on
 
-colorscheme molokai
+" colorscheme molokai
 
 " Didnt work
 "syntax include @TEX syntax/tex.vim
