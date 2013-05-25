@@ -15,7 +15,6 @@ set ruler
 set nocompatible
 filetype indent on
 
-
 syntax on
 
 " colorscheme molokai
@@ -95,8 +94,8 @@ if has("autocmd")
 endif " has("autocmd")
 
 " Auto save folds
-au BufWinLeave * silent! mkview
-au BufWinEnter * silent! loadview
+"au BufWinLeave * silent! mkview
+"au BufWinEnter * silent! loadview
 
 " Markdown compile
 map cp :!Markdown.pl % > index.html <CR>
@@ -161,3 +160,13 @@ let g:use_processing_java=1
 
 " To enable folding for processing
 let g:processing_fold=1
+
+""""""""""""""""""""
+" ECLIM extra stuff
+""""""""""""""""""""
+
+" Autocomplete
+set omnifunc=syntaxcomplete#Complete
+
+" Remove the silly scratch preview thing on autocomplete
+set completeopt-=preview
