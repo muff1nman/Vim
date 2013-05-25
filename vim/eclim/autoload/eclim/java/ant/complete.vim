@@ -5,7 +5,7 @@
 "
 " License:
 "
-" Copyright (C) 2005 - 2012  Eric Van Dewoestine
+" Copyright (C) 2005 - 2013  Eric Van Dewoestine
 "
 " This program is free software: you can redistribute it and/or modify
 " it under the terms of the GNU General Public License as published by
@@ -79,8 +79,8 @@ function! eclim#java#ant#complete#CodeComplete(findstart, base)
     let command = substitute(command, '<encoding>', eclim#util#GetEncoding(), '')
 
     let completions = []
-    let results = eclim#ExecuteEclim(command)
-    if type(results) != 3
+    let results = eclim#Execute(command)
+    if type(results) != g:LIST_TYPE
       return
     endif
 
@@ -126,8 +126,8 @@ function! eclim#java#ant#complete#CommandCompleteTarget(argLead, cmdLine, cursor
     let command = substitute(command, '<project>', project, '')
     let command = substitute(command, '<file>', file, '')
 
-    let targets = eclim#ExecuteEclim(command)
-    if type(targets) != 3
+    let targets = eclim#Execute(command)
+    if type(targets) != g:LIST_TYPE
       return []
     endif
 
