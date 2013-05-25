@@ -104,11 +104,10 @@ map cp :!Markdown.pl % > index.html <CR>
 set nocp
 
 " Added to hightlight text that goes over 80
-
-augroup vimrc_autocmds
-  autocmd BufEnter * highlight OverLength ctermbg=darkgrey guibg=#592929
-  autocmd BufEnter * match OverLength /\%82v.*/
-augroup END
+"augroup vimrc_autocmds
+  "autocmd BufEnter * highlight OverLength ctermbg=darkgrey guibg=#592929
+  "autocmd BufEnter * match OverLength /\%82v.*/
+"augroup END
 
 """" Mapings for half screen up and half screen down.
 nmap J <C-D>
