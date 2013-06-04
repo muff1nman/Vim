@@ -18,7 +18,7 @@ filetype indent on
 
 syntax on
 
-"colorscheme molokai
+" colorscheme molokai
 
 " Didnt work
 "syntax include @TEX syntax/tex.vim
@@ -168,3 +168,12 @@ nnoremap <A-Left> :tabprevious<CR>
 nnoremap <A-Right> :tabnext<CR>
 nnoremap <silent> <C-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
 nnoremap <silent> <C-Right> :execute 'silent! tabmove ' . tabpagenr()<CR>
+""""""""""""""""""""
+" ECLIM extra stuff
+""""""""""""""""""""
+
+" Autocomplete
+set omnifunc=syntaxcomplete#Complete
+
+" Remove the silly scratch preview thing on autocomplete
+set completeopt-=preview

@@ -5,7 +5,7 @@
 "
 " License:
 "
-" Copyright (C) 2005 - 2010  Eric Van Dewoestine
+" Copyright (C) 2005 - 2013  Eric Van Dewoestine
 "
 " This program is free software: you can redistribute it and/or modify
 " it under the terms of the GNU General Public License as published by
@@ -31,7 +31,7 @@
 function! eclim#xml#format#Format()
   " first save the file and validate to ensure no errors
   call eclim#util#ExecWithoutAutocmds('update')
-  call eclim#xml#validate#Validate('', 1)
+  call eclim#xml#validate#Validate(0, '!')
   if len(getloclist(0)) > 0
     call eclim#util#EchoError(
       \ 'File contains errors (:lopen), please correct before formatting.')
@@ -49,7 +49,7 @@ function! eclim#xml#format#Format()
   let command = substitute(command, '<indent>', &shiftwidth, '')
   let command = substitute(command, '<ff>', &ff, '')
 
-  let result = eclim#ExecuteEclim(command)
+  let result = eclim#Execute(command)
   if result != '0'
     silent! 1,$delete _
     silent put =result
