@@ -18,7 +18,7 @@ filetype indent on
 
 syntax on
 
-colorscheme molokai
+"colorscheme molokai
 
 " Didnt work
 "syntax include @TEX syntax/tex.vim
@@ -162,3 +162,9 @@ let g:use_processing_java=1
 
 " To enable folding for processing
 let g:processing_fold=1
+
+" Some tab awesomeness
+nnoremap <A-Left> :tabprevious<CR>
+nnoremap <A-Right> :tabnext<CR>
+nnoremap <silent> <C-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
+nnoremap <silent> <C-Right> :execute 'silent! tabmove ' . tabpagenr()<CR>
