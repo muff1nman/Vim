@@ -7,6 +7,32 @@ let g:license = 'All Rights Reserved.'
 "pathogen
 execute pathogen#infect()
 
+" Relative line numbering
+set relativenumber
+
+" Toggle relative numbering
+function! NumberToggle()
+  if(&relativenumber == 1)
+    set number
+  else
+    set relativenumber
+  endif
+endfunc
+
+nnoremap <C-n> :call NumberToggle()<cr>
+
+" Only absolute numbers in insert mode
+autocmd InsertEnter * :set number
+autocmd InsertLeave * :set relativenumber
+
+" Absolute numbers when window not in focus
+" Does not work for terminal?
+"autocmd FocusLost * :set number
+"autocmd FocusGained * :set relativenumber
+
+" Possibly look into the following
+" https://github.com/myusuf3/numbers.vim
+
 " For copying automatically the visual selection
 set go+=a
 set clipboard=unnamed
@@ -177,3 +203,4 @@ set omnifunc=syntaxcomplete#Complete
 
 " Remove the silly scratch preview thing on autocomplete
 set completeopt-=preview
+
