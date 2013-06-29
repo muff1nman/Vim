@@ -45,6 +45,7 @@ filetype indent on
 syntax on
 
 " colorscheme molokai
+" colorscheme railscat
 
 " Didnt work
 "syntax include @TEX syntax/tex.vim
@@ -121,8 +122,8 @@ if has("autocmd")
 endif " has("autocmd")
 
 " Auto save folds
-au BufWinLeave * silent! mkview
-au BufWinEnter * silent! loadview
+"au BufWinLeave * silent! mkview
+"au BufWinEnter * silent! loadview
 
 " Markdown compile
 map cp :!Markdown.pl % > index.html <CR>
