@@ -84,7 +84,7 @@ set incsearch
 set shiftwidth=2
 set tabstop=2
 set softtabstop=2
-set expandtab
+set noexpandtab
 set smartindent
 set tw=80
 set fo=cqt
