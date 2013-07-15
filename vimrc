@@ -46,6 +46,8 @@ syntax on
 
 " colorscheme molokai
 " colorscheme railscat
+" colorscheme transparent
+colorscheme ir_black
 
 " Didnt work
 "syntax include @TEX syntax/tex.vim
@@ -191,10 +193,10 @@ let g:use_processing_java=1
 let g:processing_fold=1
 
 " Some tab awesomeness
-nnoremap <A-Left> :tabprevious<CR>
-nnoremap <A-Right> :tabnext<CR>
-nnoremap <silent> <C-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
-nnoremap <silent> <C-Right> :execute 'silent! tabmove ' . tabpagenr()<CR>
+"nnoremap <S-Left> :tabprevious<CR>
+"nnoremap <S-Right> :tabnext<CR>
+"nnoremap <silent> <C-S-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
+"nnoremap <silent> <C-S-Right> :execute 'silent! tabmove ' . tabpagenr()<CR>
 """"""""""""""""""""
 " ECLIM extra stuff
 """"""""""""""""""""
@@ -205,3 +207,5 @@ set omnifunc=syntaxcomplete#Complete
 " Remove the silly scratch preview thing on autocomplete
 set completeopt-=preview
 
+" 256 colors
+set t_Co=256
