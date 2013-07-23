@@ -209,3 +209,8 @@ set completeopt-=preview
 
 " 256 colors
 set t_Co=256
+
+" Switch the keymappings for command t so that <C-T> opens in the same tab and
+" Enter opens in a new tab
+let g:CommandTAcceptSelectionMap = '<C-t>'
+let g:CommandTAcceptSelectionTabMap = '<CR>'
