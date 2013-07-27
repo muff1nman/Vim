@@ -214,3 +214,7 @@ set t_Co=256
 " Enter opens in a new tab
 let g:CommandTAcceptSelectionMap = '<C-t>'
 let g:CommandTAcceptSelectionTabMap = '<CR>'
+
+" Let there be syntax highlighting inside markdown code blocks for the following
+" languages
+let g:markdown_fenced_languages = ["ruby", "html"]
