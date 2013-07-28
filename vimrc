@@ -9,15 +9,18 @@ execute pathogen#infect()
 
 " Relative line numbering
 set relativenumber
+set number
 
+ "Vim has seemed to changed the behavior of when both relative and number are
+ "set
 " Toggle relative numbering
-function! NumberToggle()
-  if(&relativenumber == 1)
-    set number
-  else
-    set relativenumber
-  endif
-endfunc
+"function! NumberToggle()
+	"if(&relativenumber == 1)
+		"set number
+	"else
+		"set relativenumber
+	"endif
+"endfunc
 
 nnoremap <C-n> :call NumberToggle()<cr>
 
@@ -209,3 +212,21 @@ set completeopt-=preview
 
 " 256 colors
 set t_Co=256
+
+" BEGIN override the default behavior for pasteing"
+" Found at http://stackoverflow.com/questions/290465/vim-how-to-paste-over-without-overwriting-register
+"""""""""""""""""""""""""""""""""""""""""""""""""""
+function! RestoreRegister()
+  let @" = s:restore_reg
+  return ''
+endfunction
+
+function! s:Repl()
+    let s:restore_reg = @"
+    return "p@=RestoreRegister()\<cr>"
+endfunction
+
+" NB: this supports "rp that replaces the selection by the contents of @r
+vnoremap <silent> <expr> p <sid>Repl()
+"""""""""""""""""""""""""""""""""""""""""""""""""""
+" END
