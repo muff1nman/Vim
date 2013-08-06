@@ -239,3 +239,9 @@ let g:CommandTAcceptSelectionTabMap = '<CR>'
 " Let there be syntax highlighting inside markdown code blocks for the following
 " languages
 let g:markdown_fenced_languages = ["ruby", "html"]
+
+" Rspec.vim mappings
+map <Leader>rf :call RunCurrentSpecFile()<CR>
+map <Leader>rs :call RunNearestSpec()<CR>
+map <Leader>rl :call RunLastSpec()<CR>
+map <Leader>ra :call RunAllSpecs()<CR>
