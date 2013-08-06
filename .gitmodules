@@ -46,3 +46,6 @@
 [submodule "vim/bundle/gradle"]
 	path = vim/bundle/gradle
 	url = https://github.com/sellerie/vim-gradle.git
+[submodule "vim/bundle/vim-rspec"]
+	path = vim/bundle/vim-rspec
+	url = https://github.com/thoughtbot/vim-rspec.git
