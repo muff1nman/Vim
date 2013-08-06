@@ -13,3 +13,15 @@ repositories that are combined into vim with pathogen.  So, please use:
     git clone --recursive https://github.com/muff1nman/Vim.git
 
 
+Rspec Testing
+----------
+To run rspecs within files, I have added the `vim-rspec` plugin.  When within an
+rspec file you can use the following commands:  
+
+``` vim
+" Rspec.vim mappings
+map <Leader>rf :call RunCurrentSpecFile()<CR>
+map <Leader>rs :call RunNearestSpec()<CR>
+map <Leader>rl :call RunLastSpec()<CR>
+map <Leader>ra :call RunAllSpecs()<CR>
+```
