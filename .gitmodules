@@ -43,3 +43,6 @@
 [submodule "vim/bundle/command-t"]
 	path = vim/bundle/command-t
 	url = git://git.wincent.com/command-t.git
+[submodule "vim/bundle/gradle"]
+	path = vim/bundle/gradle
+	url = https://github.com/sellerie/vim-gradle.git
