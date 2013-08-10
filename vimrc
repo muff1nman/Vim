@@ -245,3 +245,7 @@ map <Leader>rf :call RunCurrentSpecFile()<CR>
 map <Leader>rs :call RunNearestSpec()<CR>
 map <Leader>rl :call RunLastSpec()<CR>
 map <Leader>ra :call RunAllSpecs()<CR>
+
+" Keep tmp files in the tmp folder
+set dir=/tmp//,.
+set backupdir=/tmp//,.
