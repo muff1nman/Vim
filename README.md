@@ -32,6 +32,13 @@ more up to date.
 #### Eclimd
 TODO
 
+#### Swap Parameters
+This plugin will need vim compiled with python support
+
+Compiling Vim
+----------
+TODO - list needed compile parameters
+
 Rspec Testing
 ----------
 To run rspecs within files, I have added the `vim-rspec` plugin.  When within an
