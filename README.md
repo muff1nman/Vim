@@ -12,6 +12,25 @@ repositories that are combined into vim with pathogen.  So, please use:
 
     git clone --recursive https://github.com/muff1nman/Vim.git
 
+Additional/Optional Setup
+----------
+
+#### Command-T
+Command-T needs a bit of manual setup.  For one, you need to have built vim with
+ruby support.  Second, you need to build the C extensions.  This is documented
+in the submodule, but in short, once you have recursively cloned this repo, go
+into the `vim/bundle/command-t/ruby/command-t` directory and run 
+
+```
+ruby extconf.rb
+make
+```
+
+Please check the README in that submodule as those instructions are most likely
+more up to date.
+
+#### Eclimd
+TODO
 
 Rspec Testing
 ----------
