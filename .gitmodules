@@ -52,3 +52,6 @@
 [submodule "vim/bundle/cmake"]
 	path = vim/bundle/cmake
 	url = https://github.com/vhdirk/vim-cmake.git
+[submodule "vim/bundle/clang_complete"]
+	path = vim/bundle/clang_complete
+	url = https://github.com/Rip-Rip/clang_complete.git
