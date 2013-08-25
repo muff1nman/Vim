@@ -49,3 +49,6 @@
 [submodule "vim/bundle/vim-rspec"]
 	path = vim/bundle/vim-rspec
 	url = https://github.com/thoughtbot/vim-rspec.git
+[submodule "vim/bundle/cmake"]
+	path = vim/bundle/cmake
+	url = https://github.com/vhdirk/vim-cmake.git
