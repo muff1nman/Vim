@@ -253,3 +253,6 @@ set backupdir=/tmp//,.
 " Clang complete configurations
 let g:clang_auto_user_options = 'compile_commands.json'
 let g:clang_compilation_database_search_path = 'build/compile_commands.json'
+
+" Recognize cmake files
+autocmd BufRead,BufNewFile *.cmake,CMakeLists.txt setf cmake 
