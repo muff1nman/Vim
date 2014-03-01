@@ -195,11 +195,24 @@ let g:use_processing_java=1
 " To enable folding for processing
 let g:processing_fold=1
 
-" Some tab awesomeness
-"nnoremap <S-Left> :tabprevious<CR>
-"nnoremap <S-Right> :tabnext<CR>
-"nnoremap <silent> <C-S-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
-"nnoremap <silent> <C-S-Right> :execute 'silent! tabmove ' . tabpagenr()<CR>
+" Some tab awesomeness (only works in gvim)
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
+nnoremap <S-Left> :tabmove -1<CR>
+nnoremap <S-Right> :tabmove 1<CR>
+
+
+" gvim fonts:
+if has("gui_running")
+  if has("gui_gtk2")
+    set guifont=DejaVu\ Sans\ Mono\ 12
+  elseif has("gui_macvim")
+    set guifont=Menlo\ Regular:h14
+  elseif has("gui_win32")
+    set guifont=Consolas:h11:cANSI
+  endif
+endif
+
 """"""""""""""""""""
 " ECLIM extra stuff
 """"""""""""""""""""
