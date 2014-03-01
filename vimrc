@@ -152,11 +152,11 @@ nnoremap <C-U> K
 set selection=exclusive
 
 "Nasty tab 
-nnoremap <Tab> <Esc>
-vnoremap <Tab> <Esc>gV
-onoremap <Tab> <Esc>
-inoremap <Tab> <Esc>`^
-inoremap <Leader><Tab> <Tab>
+"nnoremap <Tab> <Esc>
+"vnoremap <Tab> <Esc>gV
+"onoremap <Tab> <Esc>
+"inoremap <Tab> <Esc>`^
+"inoremap <Leader><Tab> <Tab>
 
 " Allow backspace in insert mode
 set backspace=indent,eol,start
