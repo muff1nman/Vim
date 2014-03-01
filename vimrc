@@ -252,3 +252,7 @@ set backupdir=/tmp//,.
 
 " Recognize cmake files
 autocmd BufRead,BufNewFile *.cmake,CMakeLists.txt setf cmake 
+
+let g:ycm_server_keep_logfiles = 1
+let g:ycm_server_log_level = "debug"
+
