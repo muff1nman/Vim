@@ -270,3 +270,10 @@ let g:ycm_server_keep_logfiles = 1
 let g:ycm_server_log_level = "debug"
 
 let g:CommandTWildIgnore=&wildignore . ",**target/*"
+
+let g:EclimCompletionMethod = 'omnifunc'
+
+let g:EasyClipEnableBlackHoleRedirectForDeleteOperator = 0
+
+let g:ycm_key_list_select_completion = [ '<Down>' ]
+let g:ycm_key_list_previous_completion = [ '<Up>' ]
