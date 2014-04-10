@@ -269,7 +269,7 @@ autocmd BufRead,BufNewFile *.cmake,CMakeLists.txt setf cmake
 let g:ycm_server_keep_logfiles = 1
 let g:ycm_server_log_level = "debug"
 
-let g:CommandTWildIgnore=&wildignore . ",**target/*"
+let g:CommandTWildIgnore=&wildignore . ",**target/*,**vendor/*"
 
 let g:EclimCompletionMethod = 'omnifunc'
 
