@@ -25,6 +25,8 @@ add_subdirectory(vim/bundle/youcompleteme/third_party/ycmd/cpp/)
 get_filename_component(VIMRC_FILENAME ${VIMRC} NAME)
 get_filename_component(VIMRC_FOLDER ${VIMRC} PATH)
 
+message(STATUS "Vim files will be installed to ${VIMDIR}")
+message(STATUS "Vimrc will be installed at ${VIMRC_FOLDER}/${VIMRC_FILENAME}")
 install(
 	FILES ${CMAKE_CURRENT_BINARY_DIR}/vimrc
 	DESTINATION ${VIMRC_FOLDER}
