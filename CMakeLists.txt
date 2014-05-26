@@ -1,0 +1,31 @@
+cmake_minimum_required(VERSION 2.8)
+project(DeMariaVim NONE)
+
+if(NOT DEFINED VIMDIR)
+	SET(VIMDIR $ENV{HOME}/.vim)
+endif()
+
+if(NOT DEFINED VIMRC)
+	SET(VIMRC $ENV{HOME}/.vimrc)
+endif()
+
+file(
+	COPY ${CMAKE_CURRENT_SOURCE_DIR}/vim
+	DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+
+configure_file(
+	${CMAKE_CURRENT_SOURCE_DIR}/vimrc
+	${CMAKE_CURRENT_BINARY_DIR}/vimrc
+	@ONLY)
+
+get_filename_component(VIMRC_FILENAME ${VIMRC} NAME)
+get_filename_component(VIMRC_FOLDER ${VIMRC} PATH)
+
+install(
+	FILES ${CMAKE_CURRENT_BINARY_DIR}/vimrc
+	DESTINATION ${VIMRC_FOLDER}
+	RENAME ${VIMRC_FILENAME})
+
+install(
+	DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/vim/
+	DESTINATION ${VIMDIR})
