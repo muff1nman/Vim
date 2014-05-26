@@ -2,21 +2,25 @@ cmake_minimum_required(VERSION 2.8)
 project(DeMariaVim NONE)
 
 if(NOT DEFINED VIMDIR)
-	SET(VIMDIR $ENV{HOME}/.vim)
+	SET(VIMDIR $ENV{HOME}/.vim2)
 endif()
 
 if(NOT DEFINED VIMRC)
-	SET(VIMRC $ENV{HOME}/.vimrc)
+	SET(VIMRC $ENV{HOME}/.vimrc2)
 endif()
 
-file(
-	COPY ${CMAKE_CURRENT_SOURCE_DIR}/vim
-	DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+message(STATUS "Checking submodules are present")
+execute_process(
+	COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/scripts/check_submodules_present.rb
+	RESULT_VARIABLE SUBMODULES_OKAY)
 
-configure_file(
-	${CMAKE_CURRENT_SOURCE_DIR}/vimrc
-	${CMAKE_CURRENT_BINARY_DIR}/vimrc
-	@ONLY)
+if(NOT(${SUBMODULES_OKAY} EQUAL 0))
+	message(FATAL_ERROR "One or more submodules are missing")
+else()
+	message(STATUS "Submodules seem to be all there")
+endif()
+
+add_subdirectory(vim/bundle/youcompleteme/third_party/ycmd/cpp/)
 
 get_filename_component(VIMRC_FILENAME ${VIMRC} NAME)
 get_filename_component(VIMRC_FOLDER ${VIMRC} PATH)
