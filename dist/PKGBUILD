@@ -6,8 +6,8 @@ pkgdesc="Vim setup for Andrew DeMaria"
 arch=('any')
 url="https://github.com/muff1nman/Vim"
 license=('MIT')
-depends=('vundle-git' 'vim')
-makedepends=('git')
+depends=('vim')
+makedepends=('git' 'cmake' 'ruby')
 source=("$pkgname"::'git://github.com/muff1nman/Vim')
 md5sums=('SKIP')
 
@@ -21,7 +21,7 @@ pkgver() {
 #}
 
 build() {
-	cd "$srcdir/Vim"
+	cd "$srcdir/$pkgname"
 	cmake \
 		-DUSE_CLANG_COMPLETER=ON \
 		-DUSE_SYSTEM_LIBCLANG=ON \
@@ -32,6 +32,6 @@ build() {
 }
 
 package() {
-	cd "$srcdir/Vim"
+	cd "$srcdir/$pkgname"
 	make install
 }
