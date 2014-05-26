@@ -1,0 +1,37 @@
+# Maintainer: Andrew DeMaria <lostonamountain@gmail.com>
+pkgname=demaria-vimrc
+pkgver=0.0.0
+pkgrel=1
+pkgdesc="Vim setup for Andrew DeMaria"
+arch=('any')
+url="https://github.com/muff1nman/Vim"
+license=('MIT')
+depends=('vundle-git' 'vim')
+makedepends=('git')
+source=("$pkgname"::'git://github.com/muff1nman/Vim')
+md5sums=('SKIP')
+
+pkgver() {
+	cd "$srcdir/repo"
+	printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+#prepare() {
+	#cd "$srcdir/$pkgname-$pkgver"
+#}
+
+build() {
+	cd "$srcdir/Vim"
+	cmake \
+		-DUSE_CLANG_COMPLETER=ON \
+		-DUSE_SYSTEM_LIBCLANG=ON \
+		-DVIMDIR=/usr/shar/vim/vimfiles \
+		-DVIMRC=/etc/vimrc \
+		.
+	make
+}
+
+package() {
+	cd "$srcdir/Vim"
+	make install
+}
