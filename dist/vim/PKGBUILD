@@ -435,7 +435,7 @@ package_vim-runtime-rdy() {
 
   install -Dm644 "${srcdir}"/additional-runtime/vimrc "${pkgdir}"/etc/vimrc
 
-  install -dm644 "${pkgdir}"/usr/share/vim/
+  install -dm755 "${pkgdir}"/usr/share/vim/
   mv "${srcdir}"/additional-runtime/vim/* "${pkgdir}"/usr/share/vim/vimfiles
 }
 
