@@ -313,8 +313,6 @@ build() {
 	cmake \
 		-DUSE_CLANG_COMPLETER=ON \
 		-DUSE_SYSTEM_LIBCLANG=ON \
-		-DVIMDIR=$pkgdir/usr/share/vim/vimfiles \
-		-DVIMRC=$pkgdir/etc/vimrc \
 		.
 	make
 }
@@ -396,7 +394,7 @@ package_gvim-rdy() {
 
 package_vim-runtime-rdy() {
 	cd "$srcdir/additional-runtime"
-	pkgver="r$(git rev-list --count HEAD).$(git rev-parse --short HEAD)"
+	#pkgver="r$(git rev-list --count HEAD).$(git rev-parse --short HEAD)"
   pkgdesc='Runtime for vim and gvim'
   provides=("vim-runtime=${pkgver}-${pkgrel}")
   conflicts=("vim-runtime")
@@ -435,10 +433,10 @@ package_vim-runtime-rdy() {
   ln -s /usr/share/vim/${_versiondir}/doc/uganda.txt \
     "${pkgdir}"/usr/share/licenses/vim-runtime/license.txt
 
-	mkdir -p $pkgdir/etc
-	mkdir -p $pkgdir/usr/share/vim/vimfiles
-	cd "$srcdir/additional-runtime"
-	make install
+  install -Dm644 "${srcdir}"/additional-runtime/vimrc "${pkgdir}"/etc/vimrc
+
+  install -dm644 "${pkgdir}"/usr/share/vim/
+  mv "${srcdir}"/additional-runtime/vim/* "${pkgdir}"/usr/share/vim/vimfiles
 }
 
 # vim:set sw=2 sts=2 et:
