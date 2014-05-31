@@ -1,8 +1,8 @@
-# Maintainer: Thomas Dziedzic <gostrc@gmail.com>
+# Maintainer: Andrew DeMaria <lostonamountain@gmail.com>
+# Contributor: Thomas Dziedzic <gostrc@gmail.com>
 # Contributor: Jan "heftig" Steffens <jan.steffens@gmail.com>
 # Contributor: tobias [ tobias at archlinux org ]
 # Contributor: Daniel J Griffiths <ghost1227@archlinux.us>
-# Mangler: Andrew DeMaria <lostonamountain@gmail.com>
 
 pkgbase=vim
 pkgname=("vim-rdy" "gvim-rdy" "vim-runtime-rdy")
@@ -14,7 +14,7 @@ pkgver=${_topver}.${_patchlevel}
 pkgrel=1
 arch=('i686' 'x86_64')
 license=('custom:vim')
-url="http://www.vim.org"
+url="https://github.com/muff1nman/Vim"
 makedepends=(
         'gpm'
         'python2'
@@ -330,7 +330,7 @@ check() {
 }
 
 package_vim-rdy() {
-  pkgdesc='Vi Improved, a highly configurable, improved version of the vi text editor'
+  pkgdesc='vim ready to go with popular plugins and a default configuration'
   depends=("vim-runtime-rdy" 'gpm')
   conflicts=('gvim' 'vim' 'gvim-rdy')
   provides=("vim=${pkgver}-${pkgrel}")
@@ -358,7 +358,7 @@ package_vim-rdy() {
 }
 
 package_gvim-rdy() {
-  pkgdesc='Vi Improved, a highly configurable, improved version of the vi text editor (with advanced features, such as a GUI)'
+  pkgdesc='gvim ready to go with popular plugins and a default configuration'
   depends=("vim-runtime-rdy" 'gpm' 'ruby' 'libxt'
            'desktop-file-utils' 'gtk2' 'lua' 'python2')
   provides=("vim=${pkgver}-${pkgrel}")
@@ -395,7 +395,7 @@ package_gvim-rdy() {
 package_vim-runtime-rdy() {
 	cd "$srcdir/additional-runtime"
 	#pkgver="r$(git rev-list --count HEAD).$(git rev-parse --short HEAD)"
-  pkgdesc='Runtime for vim and gvim'
+  pkgdesc='Runtime for vim and gvim loaded up with additional configurations'
   provides=("vim-runtime=${pkgver}-${pkgrel}")
   conflicts=("vim-runtime")
   depends=('perl' 'gawk')
