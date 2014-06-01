@@ -13,3 +13,12 @@ else()
 endif()
 
 add_subdirectory(vim/bundle/youcompleteme/third_party/ycmd/cpp/)
+
+include(ExternalProject)
+ExternalProject_Add(commandt
+	PREFIX vim/bundle/command-t/ruby/command-t
+	SOURCE_DIR vim/bundle/command-t/ruby/command-t
+	BINARY_DIR vim/bundle/command-t/ruby/command-t
+	CONFIGURE_COMMAND ruby extconf.rb
+	BUILD_COMMAND make
+	INSTALL_COMMAND "")
