@@ -4,7 +4,8 @@
 # Contributor: tobias [ tobias at archlinux org ]
 # Contributor: Daniel J Griffiths <ghost1227@archlinux.us>
 
-pkgbase=vim
+pkgbase=vim-rdy
+_prevpkgbase=vim
 pkgname=("vim-rdy" "gvim-rdy" "vim-runtime-rdy")
 _topver=7.4
 _patchlevel=274
@@ -127,16 +128,16 @@ mksource() {
   fi
   popd
 
-  mv vim ${pkgbase}-${pkgver}
-  find ${pkgbase}-${pkgver} -depth -type d -name .hg -exec rm -rf {} \;
-  rm ${pkgbase}-${pkgver}/{.hgignore,.hgtags}
-  tar -cJf ${pkgbase}-${pkgver}.tar.xz ${pkgbase}-${pkgver}/*
-  rm -r ${pkgbase}-${pkgver}
+  mv vim ${_prevpkgbase}-${pkgver}
+  find ${_prevpkgbase}-${pkgver} -depth -type d -name .hg -exec rm -rf {} \;
+  rm ${_prevpkgbase}-${pkgver}/{.hgignore,.hgtags}
+  tar -cJf ${_prevpkgbase}-${pkgver}.tar.xz ${_prevpkgbase}-${pkgver}/*
+  rm -r ${_prevpkgbase}-${pkgver}
 
-  gpg --detach-sign ${pkgbase}-${pkgver}.tar.xz
+  gpg --detach-sign ${_prevpkgbase}-${pkgver}.tar.xz
 
-  scp ${pkgbase}-${pkgver}.tar.xz nym:/srv/ftp/other/vim/
-  scp ${pkgbase}-${pkgver}.tar.xz.sig nym:/srv/ftp/other/vim/
+  scp ${_prevpkgbase}-${pkgver}.tar.xz nym:/srv/ftp/other/vim/
+  scp ${_prevpkgbase}-${pkgver}.tar.xz.sig nym:/srv/ftp/other/vim/
 }
 
 prepare() {
@@ -253,7 +254,7 @@ prepare() {
 }
 
 build() {
-  cp -a ${pkgbase}-${pkgver} vim-build
+  cp -a ${_prevpkgbase}-${pkgver} vim-build
 
   # define the place for the global (g)vimrc file (set to /etc/vimrc)
   sed -i 's|^.*\(#define SYS_.*VIMRC_FILE.*"\) .*$|\1|' \
@@ -354,7 +355,7 @@ package_vim-rdy() {
 
   # license
   install -Dm644 "${srcdir}"/vim-${pkgver}/runtime/doc/uganda.txt \
-    "${pkgdir}"/usr/share/licenses/${pkgbase}/license.txt
+    "${pkgdir}"/usr/share/licenses/${_prevpkgbase}/license.txt
 }
 
 package_gvim-rdy() {
@@ -389,7 +390,7 @@ package_gvim-rdy() {
 
   # license
    install -Dm644 "${srcdir}"/vim-${pkgver}/runtime/doc/uganda.txt \
-    "${pkgdir}"/usr/share/licenses/${pkgbase}/license.txt
+    "${pkgdir}"/usr/share/licenses/${_prevpkgbase}/license.txt
 }
 
 package_vim-runtime-rdy() {
