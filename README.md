@@ -29,3 +29,12 @@ Then, build the project, by running in the top directory:
 	make
 
 Then, copy the vim directory and vimrc file to wherever you want.
+
+Customizing
+-----------
+If you installed this package to `/usr/share/vim/vimfiles`, you can override
+some of the settings by creating your own `.vimrc` file in your home directory.
+For example, to choose a different color scheme:
+
+	colorscheme ir_black
+
