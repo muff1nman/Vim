@@ -165,8 +165,8 @@ if &t_Co > 255
    hi Operator        ctermfg=161
 
    " complete menu
-   hi Pmenu           ctermfg=81  ctermbg=16
-   hi PmenuSel                    ctermbg=244
+   hi Pmenu           ctermfg=81  ctermbg=66
+   hi PmenuSel                    ctermbg=144
    hi PmenuSbar                   ctermbg=232
    hi PmenuThumb      ctermfg=81
 
@@ -206,6 +206,6 @@ if &t_Co > 255
    hi Comment         ctermfg=59
    hi CursorLine                  ctermbg=234   cterm=none
    hi CursorColumn                ctermbg=234
-   hi LineNr          ctermfg=250 ctermbg=236
+   "hi LineNr          ctermfg=250 ctermbg=236
    hi NonText         ctermfg=250 ctermbg=233
 end
