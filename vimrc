@@ -169,9 +169,6 @@ set backspace=indent,eol,start
 "
 "" End attempt for autosave
 
-" Yaml
-au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/yaml.vim
-
 " :W the same as :w
 command W w
 command Wq wq
