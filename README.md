@@ -9,9 +9,14 @@ most important features that IDEs might have.
 Installation
 ------
 
-For Arch Linux users, you can install vim-rdy system-wide from the AUR.
+For Arch Linux users, you can install vim-rdy system-wide from the following
+repository (Add to the bottom of you `pacman.conf`).
 
-For everyone else or if you want to install to your home directory, read on!
+	[muff1nman]
+	Server = http://repo.andrewdemaria.com/archlinux/
+
+For everyone else or if you're an Arch User and want to install to your home
+directory, read on!
 
 *WARNING* This is still a work in progress and there are many undocumented
 dependencies. Also the vimrc file by default is tailored to Arch Linux users.
