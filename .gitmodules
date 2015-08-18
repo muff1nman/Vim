@@ -70,3 +70,9 @@
 [submodule "vim/bundle/vim-easyclip"]
 	path = vim/bundle/vim-easyclip
 	url = git://github.com/svermeulen/vim-easyclip.git
+[submodule "vim/bundle/vim-easy-align"]
+	path = vim/bundle/vim-easy-align
+	url = https://github.com/junegunn/vim-easy-align.git
+[submodule "vim/bundle/vim-cucumber"]
+	path = vim/bundle/vim-cucumber
+	url = https://github.com/tpope/vim-cucumber.git
