@@ -137,7 +137,7 @@ nnoremap <C-D> J
 nnoremap <C-U> K
 
 ""select only word
-set selection=exclusive
+" set selection=exclusive
 
 "Nasty tab 
 nnoremap <Tab> <Esc>
