@@ -2,7 +2,7 @@ filetype plugin on
 
 runtime! archlinux.vim
 let g:username = "Andrew DeMaria (muff1nman)"
-let g:email = "ademaria@mines.edu"
+let g:email = "lostonamountain@gmail.com"
 "let g:license = 'All Rights Reserved\r * No part of this code may be reproduced, copied, modified or adapted without the prior written consent of the author, however the source code may be reproduced for academic purposes within the confined environment of the Colorado School of Mines.'
 let g:license = 'All Rights Reserved.'
 "pathogen
